@@ -16,6 +16,7 @@ class TagsController < ApplicationController
     tag_attributes.values.each do |tag_attribute|
       tag = Tags.find_or_create_by(tag_attribute)
       self.tags << tag
+    end
   end
 
 end
