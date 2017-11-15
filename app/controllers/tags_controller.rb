@@ -12,11 +12,4 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
   end
 
-  def tags_attributes=(tag_attributes)
-    tag_attributes.values.each do |tag_attribute|
-      tag = Tags.find_or_create_by(name: tag_attribute)
-      self.tags << tag
-    end
-  end
-
 end
