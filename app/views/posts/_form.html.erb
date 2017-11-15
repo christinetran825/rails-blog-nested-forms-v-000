@@ -12,11 +12,10 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %><br>
-    <%= f.label :content %><br>
-    <%= f.text_area :content %><br>
-    Tags:
+    New Tags:
+    <%= f.fields_for :tags do |tag_form| %>
+      <%= tag_form.label :name %><br>
+      <%= tag_form.text_field :name %><br>
   </div>
 
   <div class="field">
