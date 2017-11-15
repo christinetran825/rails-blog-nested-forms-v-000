@@ -12,4 +12,8 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
   end
 
+  def :tags_attributes=(tag_attribute)
+    
+  end
+
 end
